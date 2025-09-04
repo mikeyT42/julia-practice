@@ -15,7 +15,8 @@ end
 
 ################################################################################
 function divide(x, y)
-    x / y
+    # Integer division
+    x ÷ y
 end
 
 ################################################################################
@@ -40,6 +41,16 @@ x = 5
 y = 2
 
 result = add(x, y)
+println("result = ", result)
+result = subtract(x, y)
+println("result = ", result)
+result = multiply(x, y)
+println("result = ", result)
+result = divide(x, y)
+println("result = ", result)
+result = remainder_of(x, y)
+println("result = ", result)
+result = power(x, y)
 println("result = ", result)
 
 println()
