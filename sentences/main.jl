@@ -1,7 +1,14 @@
+using Printf
+
 @enum LoopControl again stop
 
 ################################################################################
 function keystrokes(input)
+    keystrokes = 0
+    for char in input
+        keystrokes += 1
+    end
+    return keystrokes
 end
 
 ################################################################################
@@ -13,7 +20,8 @@ function input_loop()
         return stop
     end
 
-    keys = keystrokes(input)
+    total_keystrokes = keystrokes(input)
+    @printf("\nKeystrokes: %10i", total_keystrokes);
 end
 
 ################################################################################
