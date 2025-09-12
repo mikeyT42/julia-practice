@@ -38,6 +38,21 @@ function digit_chars(input)
 end
 
 ################################################################################
+function vowels(input)
+    num_vowels = 0
+    for char in input
+        if char != 'a' || char != 'e' || char != 'i' || char != 'o' ||
+            char != 'u' || char != 'A' || char != 'E' || char != 'I' ||
+            char != 'O' || char != 'U'
+            continue
+        end
+
+        num_vowels += 1
+    end
+    return num_vowels
+end
+
+################################################################################
 function input_loop()
     println(
         "\n\nPlease input a sentence. If you want to exit, just hit enter.\n")
@@ -52,6 +67,8 @@ function input_loop()
     @printf("\nAlpha Characters: %4i", total_alpha_chars);
     total_digit_chars = digit_chars(input)
     @printf("\nNumeric Characters: %2i", total_digit_chars);
+    total_vowels = vowels(input)
+    @printf("\nVowels: %14i", total_vowels);
 end
 
 ################################################################################
